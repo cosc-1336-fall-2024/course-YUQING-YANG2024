@@ -7,8 +7,6 @@ class Test_Config(unittest.TestCase):
     def test_configuration(self):
         self.assertEqual(True, test_config())
 
-
-
     def test_float_division(self):
         self.assertEqual(2.5, float_division(10, 4))
 
