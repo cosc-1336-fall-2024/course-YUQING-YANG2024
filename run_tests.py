@@ -13,7 +13,9 @@ has the test functions
 
 #from tests.homework.c_decisions import tests_decisions #replace tests_in_proc_out with tests_decisions
 
-from tests.homework.d_repetition import tests_repetition
+#from tests.homework.d_repetition import tests_repetition
 
-suite = unittest.TestLoader().loadTestsFromModule(tests_repetition)
+from tests.homework.e_functions import tests_functions
+
+suite = unittest.TestLoader().loadTestsFromModule(tests_functions) #replace repetition with functions
 unittest.TextTestRunner(verbosity=2).run(suite)
