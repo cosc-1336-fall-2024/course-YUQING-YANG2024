@@ -1,7 +1,7 @@
 #get p-distance for every pair of strings in a collection
 
 import dictionary
-
+"""
 def menu():
     print("----MENU----\n1-Get p distance matrix\n2-Exit")
 
@@ -43,6 +43,36 @@ def run_menu():
         elif option == 2:
             exit()
 
+        else:
+            exit()
+
+run_menu()
+"""
+
+#HW8
+def menu():
+    print("Inventory Menu\n1-Add or Update Item\n2-Delete Item\n3-Exit")
+
+def run_menu():
+    option = 0
+    widget_dictionary = {}
+    while option != 3:
+        menu()
+        option = int(input("please enter your selection: "))
+        if option == 1 or 2:
+            if option == 1:
+                key = input("please enter widget name: ")
+                value = input("please enter the quantity: ")   
+                dictionary.add_inventory(widget_dictionary, key, value)
+                print("widgets_dictionary is: ", widget_dictionary)
+
+            if option == 2:
+                key = input("please enter the widget name you want to delete: ")
+                dictionary.remove_inventory(widget_dictionary, key)
+                print("widgets_dictionary is: ", widget_dictionary)
+                
+        elif option == 3:
+            exit()
         else:
             exit()
 
